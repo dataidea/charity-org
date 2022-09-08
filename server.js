@@ -23,9 +23,9 @@ app.post("/contact", (req, res) => {
   });
 
   const mailOptions = {
-    to: "jumashafara0@gmail.com",
+    to: "kjshafara0@gmail.com",
     subject: `New contact from ${req.body.name} via Liame Designs website`,
-    text: `${req.body.text} \n Sender email: ${req.body.from}`,
+    text: `${req.body.message} \n Sender email: ${req.body.email} \n Sender phone: ${req.body.phone}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
