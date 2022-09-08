@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
         message: form.message.value
     }
 
-    const res = await fetch("http://localhost:5001/contact", 
+    const res = await fetch("https://dosomethingmailer.herokuapp.com/contact", 
     {
         method: "POST",
         body: JSON.stringify(data),
