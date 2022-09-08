@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json());
@@ -23,8 +23,8 @@ app.post("/contact", (req, res) => {
   });
 
   const mailOptions = {
-    to: "kjshafara0@gmail.com",
-    subject: `New contact from ${req.body.name} via Liame Designs website`,
+    to: "shafarakj@gmail.com",
+    subject: `New contact from ${req.body.name} via dosomething website`,
     text: `${req.body.message} \n Sender email: ${req.body.email} \n Sender phone: ${req.body.phone}`,
   };
 
@@ -32,7 +32,7 @@ app.post("/contact", (req, res) => {
     if (error) {
       console.log(error);
     } else {
-      res.status(502);
+      res.status(200);
       console.log(mailOptions);
     }
   });
