@@ -16,5 +16,13 @@ form.addEventListener("submit", async (e) => {
         body: JSON.stringify(data),
         headers: {"content-Type": "application/json"},
     }) 
+
+    const res_data = await res.json()
+
+    if(res_data.status == 200){
+        alert("Your message was sent succssfully! I will be in touch as soon as I can.")
+    }else{
+        alert("Something went wrong, try refreshing and submitting the form again.")
+    }
     
 })
